@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wallpaper Contest</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-blue-500 text-white text-center py-4">
+        <h1 class="text-3xl font-bold">Welcome to Wallpaper Contest</h1>
+        <p class="text-lg">Submit your wallpapers for this week's contest!</p>
+    </header>
+
+    <main class="container mx-auto py-8">
+        <section class="contest-form bg-white p-8 rounded shadow-md mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Submit Wallpaper</h2>
+            <form action="/submit" method="post" enctype="multipart/form-data" class="space-y-4">
+                <input type="file" name="image1" accept="image/*" required class="block">
+                <input type="file" name="image2" accept="image/*" required class="block">
+                <input type="file" name="image3" accept="image/*" required class="block">
+                <input type="text" name="firstName" placeholder="First Name" required class="block border p-2 rounded">
+                <input type="text" name="lastName" placeholder="Last Name" required class="block border p-2 rounded">
+                <input type="email" name="email" placeholder="Email" required class="block border p-2 rounded">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Submit</button>
+            </form>
+        </section>
+
+        <section class="contest-results grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Placeholder images and scores -->
+            <div class="submission bg-white p-4 rounded shadow-md">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="path/to/image1.jpg" alt="Wallpaper 1" class="w-32 h-32 object-cover rounded">
+                </div>
+                <table class="w-full">
+                    <tr>
+                        <td class="font-semibold">Quality:</td>
+                        <td>8/10</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">Readability:</td>
+                        <td>9/10</td>
+                    </tr>
+                    <!-- Add more score details here -->
+                </table>
+            </div>
+            <!-- Repeat for image2 and image3 -->
+        </section>
+
+        <section class="past-contests bg-white p-8 rounded shadow-md mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Past Contests</h2>
+            <!-- Display past contests here with details -->
+        </section>
+
+        <section class="next-contest bg-white p-8 rounded shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Next Contest</h2>
+            <!-- Display date and details for the next contest -->
+        </section>
+    </main>
+
+    <footer class="bg-blue-500 text-white text-center py-4">
+        <p class="text-sm">&copy; 2023 Wallpaper Contest</p>
+    </footer>
+</body>
+
+</html>
