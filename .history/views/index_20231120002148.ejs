@@ -18,8 +18,7 @@
         <!-- Your form and contest sections -->
         <!-- ... (existing HTML form or contest sections if any) ... -->
 
-        <section class="contest-results grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Display uploaded images -->
+        <section class="contest-results grid grid-cols-1 md:grid-cols-2 gap-8"><!-- Display uploaded images -->
             <% uploadedImages.forEach(image => { %>
                 <div class="submission bg-white p-4 rounded shadow-md">
                     <div class="flex items-center justify-center mb-4">
@@ -42,8 +41,9 @@
                     </table>
                 </div>
             <% }); %>
+            
         </section>
-        
+
         <!-- Other sections like past contests, next contest, footer, etc. -->
         <!-- ... (other HTML sections if needed) ... -->
     </main>
